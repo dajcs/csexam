@@ -11,10 +11,10 @@ Secure protocols primarily aim to achieve the three core goals of the CIA (Confi
 *   **Authentication:** Verifying the digital identities of the communicating parties to guarantee they are who they claim to be.
 
 **02. What is the main difference between application-layer protocols and network-layer protocols.**
-The main difference lies in their purpose within the OSI (Open Systems Interconnection) model. Network-layer protocols (Layer 3), such as IP (Internet Protocol), are responsible for routing, addressing, and moving packets of data across different networks from a source to a destination, regardless of what the data is. Application-layer protocols (Layer 7), such as HTTP (Hypertext Transfer Protocol), operate at the top level and are responsible for formatting data and providing specific network services directly to the end-user's software (like web browsers or email clients).
+The main difference lies in their purpose within the OSI (Open Systems Interconnection) model. Network-layer protocols (Layer 3), such as IP, are responsible for routing, addressing, and moving packets of data across different networks from a source to a destination, regardless of what the data is. Application-layer protocols (Layer 7), such as HTTP (Hypertext Transfer Protocol), operate at the top level and are responsible for formatting data and providing specific network services directly to the end-user's software (like web browsers or email clients).
 
 **03. Explain the concept of port numbers and their significance in network communication.**
-Port numbers are 16-bit virtual endpoints (ranging from 0 to 65535) used in TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) networks. Their significance is that they allow a single machine with one IP (Internet Protocol) address to run multiple distinct network services simultaneously. When a packet arrives, the port number directs the operating system to hand the data over to the correct application (for example, traffic arriving on port 80 is routed to the HTTP (Hypertext Transfer Protocol) web server, while traffic on port 22 goes to the secure remote login service).
+Port numbers are 16-bit virtual endpoints (ranging from 0 to 65535) used in TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) networks. Their significance is that they allow a single machine with one IP address to run multiple distinct network services simultaneously. When a packet arrives, the port number directs the operating system to hand the data over to the correct application (for example, traffic arriving on port 80 is routed to the HTTP (Hypertext Transfer Protocol) web server, while traffic on port 22 goes to the secure remote login service).
 
 
 ## Secure Web & Remote Access Protocols
@@ -53,7 +53,7 @@ HTTPS (Hypertext Transfer Protocol Secure) is mandatory for several critical rea
 
 **10. What is the difference between Transport Mode and Tunnel Mode in IPSec, and which is used for VPNs.**
 In IPSec (Internet Protocol Security):
-*   **Transport Mode** encrypts only the data payload of the IP (Internet Protocol) packet, leaving the original IP header intact and visible. It is generally used for direct end-to-end communication between two specific host machines.
+*   **Transport Mode** encrypts only the data payload of the IP packet, leaving the original IP header intact and visible. It is generally used for direct end-to-end communication between two specific host machines.
 *   **Tunnel Mode** encrypts the entire original IP packet (both the payload and the original header). It then encapsulates this encrypted packet inside a brand-new IP packet with a new header.
 **Tunnel Mode** is the one primarily used for VPN (Virtual Private Network) connections, as it securely routes entire networks' traffic over the internet (e.g., connecting a remote worker to a corporate LAN (Local Area Network)) while hiding the internal routing information.
 
@@ -77,7 +77,7 @@ WireGuard is vastly faster and more efficient than older VPN (Virtual Private Ne
 
 **14. Explain the purpose of the Network File System (NFS) protocol and how misconfigurations can lead to exposed shares.**
 The NFS (Network File System) protocol allows a computer to share directories and files over a network, enabling client machines to mount remote file systems and interact with them as if they were local storage.
-Security risks heavily arise from poor configuration. If an NFS share is exported to "*" (meaning any IP (Internet Protocol) address can connect) rather than a strict list of trusted IPs, anyone on the network can access the files. Furthermore, if the `no_root_squash` configuration is enabled, it allows a remote user with root privileges on their own client machine to maintain those same root privileges (UID or User Identifier 0) on the shared remote files, easily leading to complete system compromise via privilege escalation.
+Security risks heavily arise from poor configuration. If an NFS share is exported to "*" (meaning any IP address can connect) rather than a strict list of trusted IPs, anyone on the network can access the files. Furthermore, if the `no_root_squash` configuration is enabled, it allows a remote user with root privileges on their own client machine to maintain those same root privileges (UID or User Identifier 0) on the shared remote files, easily leading to complete system compromise via privilege escalation.
 
 **15. Describe how the SMTP commands VRFY and EXPN can be exploited for user enumeration on a mail server.**
 In the SMTP (Simple Mail Transfer Protocol), VRFY (Verify) is a command designed to check if a specific username or email address actually exists on the mail server. EXPN (Expand) is a command designed to reveal the individual email addresses contained within an alias or a mailing list.
@@ -96,7 +96,7 @@ Keeping network protocols, server software, and configurations up-to-date is cru
 If systems are left unpatched, attackers can scan the internet to exploit these known vulnerabilities, allowing them to bypass authentication, inject malware, steal sensitive data, or crash the server via a DoS (Denial of Service) attack. Patching closes these security holes, keeping the system resilient.
 
 **18. Explain the need for setting up basic firewall rules (like using iptables) to control network access.**
-Setting up basic firewall rules using tools like `iptables` (which manages network packet filtering for the IP (Internet Protocol)) is essential for controlling network access and reducing a system's attack surface. A firewall acts as a digital barrier between your machine and the untrusted internet.
+Setting up basic firewall rules using tools like `iptables` (which manages network packet filtering for the IP) is essential for controlling network access and reducing a system's attack surface. A firewall acts as a digital barrier between your machine and the untrusted internet.
 Without firewall rules, every network service running on a machine is potentially exposed to the outside world. By implementing rules based on the principle of least privilege, administrators can explicitly allow traffic only on necessary ports (like port 443 for web traffic) and drop all other incoming connections. This prevents unauthorized access and limits the damage if an internal service is accidentally misconfigured or left running.
 
 **19. Identify common SSH configuration weaknesses that require hardening (permitting root login, password authentication).**

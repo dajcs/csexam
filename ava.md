@@ -65,7 +65,7 @@ In an RBAC (Role-Based Access Control) system, access permissions are assigned t
 
 **12. How does Attribute-Based Access Control (ABAC) differ from RBAC**
 
-While RBAC (Role-Based Access Control) grants access based solely on static, predefined roles, ABAC (Attribute-Based Access Control) makes dynamic access decisions based on a combination of multiple attributes. These can include user attributes (e.g., department, security clearance), resource attributes (e.g., data sensitivity), and environmental attributes (e.g., time of day, geographic location, or IP (Internet Protocol) address). This makes ABAC much more granular and flexible than RBAC.
+While RBAC (Role-Based Access Control) grants access based solely on static, predefined roles, ABAC (Attribute-Based Access Control) makes dynamic access decisions based on a combination of multiple attributes. These can include user attributes (e.g., department, security clearance), resource attributes (e.g., data sensitivity), and environmental attributes (e.g., time of day, geographic location, or IP address). This makes ABAC much more granular and flexible than RBAC.
 
 **13. What are the components of authorization**
 
