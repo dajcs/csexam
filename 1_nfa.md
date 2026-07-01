@@ -52,7 +52,9 @@ While the OSI model is a theoretical, 7-layer framework used primarily for educa
 
 **10. Protocols & Transmission**
 
-*(Note: This is a category header, but included here to maintain your requested numbering/order.)*
+A **Protocol** is a standardized set of rules that determines how data is formatted, transmitted, and received across a network. Because devices are made by different manufacturers (like Apple, Microsoft, or Cisco) and use different hardware, they need a common language to understand each other.
+
+**Transmission** refers to the actual physical or logical process of moving data from Point A to Point B. While protocols are the rules of the data, transmission is the transportation of the data.
 
 **11. What are the main network protocols (HTTP, HTTPS, FTP, SSH, DNS, DHCP)?**
 
@@ -81,7 +83,8 @@ While the OSI model is a theoretical, 7-layer framework used primarily for educa
 
 **15. What is the difference between Layer 2 and Layer 3 devices?**
 
-A **Layer 2** device (like a Switch) operates on the Data Link layer, keeping traffic within a single local network by forwarding frames based on physical MAC addresses. A **Layer 3** device (like a Router) operates on the Network layer, moving packets *between* different networks using logical IP addresses.
+A **Layer 2** device (like a Switch) operates on the Data Link layer, keeping traffic within a single local network by forwarding frames based on physical MAC addresses.  \
+A **Layer 3** device (like a Router) operates on the Network layer, moving packets *between* different networks using logical IP addresses.
 
 **16. What is a VLAN and why is it used?**
 
@@ -144,8 +147,8 @@ Historically, IPv4 addresses were divided into classes based on their leading bi
 **28. How to calculate subnets, hosts per subnet, and network ranges?**
 
 We calculate them by looking at the subnet mask (in binary).
-*   **Subnets:** Calculated as $2^s$, where *s* is the number of borrowed network bits.
-*   **Hosts:** Calculated as $2^h - 2$, where *h* is the number of remaining host bits (subtracting 2 accounts for the network and broadcast addresses).
+*   **Nr Subnets:** Calculated as $2^s$, where *s* is the number of borrowed network bits.
+*   **Nr Hosts:** Calculated as $2^h - 2$, where *h* is the number of remaining host bits (subtracting 2 accounts for the network and broadcast addresses).
 *   **Network Ranges:** Determined by the "block size" or increment step created by the borrowed bits.
 
 <BR>
@@ -239,7 +242,7 @@ Manually subnetting involves converting the IP and mask into binary, identifying
 
 **30. What is ARP and how does it work?**
 
-**ARP** (Address Resolution Protocol) is used to map a known logical IPv4 address to an unknown physical MAC address. A device broadcasts an ARP Request asking "Who has IP X.X.X.X?", and the device holding that IP responds with an ARP Reply saying "I do, and my MAC is Y:Y:Y:Y".
+**ARP** (Address Resolution Protocol) is used to map a known logical IPv4 address to an unknown physical MAC address. A device broadcasts an ARP Request asking "Who has IP X.X.X.X?", and the device holding that IP responds with an ARP Reply saying "I do, and my MAC is a:b:c:d:e:f".
 
 **31. What are the security concerns with ARP (ARP spoofing)?**
 
