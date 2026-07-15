@@ -11,3 +11,4 @@
 | 6 | [Passive Reconnaissance](6_pr.md)                   | [Passive](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/passive)|
 | 7 | [Active Reconnaissance](7_ar.md)                    | [Active](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/active)|
 | 8 | [Nmap Live Host Discovery](8_nmap.md)               | [Nmap](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/nmap/)|
+| 9 | [Python for Cybersecurity](9_python.md)             | [Python](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/python/)|
