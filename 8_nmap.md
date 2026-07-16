@@ -13,23 +13,28 @@
 **02. How to use nmap.**
 
 - The basic syntax is: `nmap [scan type(s)] [options] {target}`.
-- The target can be a single IP address, a hostname, a range, or a whole subnetwork – for example:
-  - `nmap 192.168.1.1` – scan a single host.
-  - `nmap scanme.nmap.org` – scan by hostname.
-  - `nmap 192.168.1.1-50` – scan a range of addresses.
-  - `nmap 192.168.1.0/24` – scan an entire subnetwork using CIDR (Classless Inter-Domain Routing) notation.
-- Common options include:
-  - `-sS` – TCP (Transmission Control Protocol) SYN scan.
+- Scan type selects the port-scanning mechanism, e.g.,:
+  - `-sS` – TCP SYN scan (stealthy).
+  - `-sT` – TCP connect scan (full connection).
+  - `-sU` – UDP scan.
+  - `-sA` – TCP ACK scan (firewall detection).
+  - `-sP` or `-sn` – ping scan (host discovery only).
+- Options modify the scan behavior, e.g.:
   - `-sV` – detect service and version information.
   - `-O` – enable OS (Operating System) detection.
   - `-p` – specify ports, e.g. `-p 80,443` or `-p 1-65535`.
   - `-A` – aggressive scan (OS detection, version detection, script scanning, and traceroute).
   - `-v` – increase verbosity of the output.
+- The target can be a single IP address, a hostname, a range, or a whole subnetwork – for example:
+  - `nmap 192.168.1.1` – scan a single host.
+  - `nmap scanme.nmap.org` – scan by hostname.
+  - `nmap 192.168.1.1-50` – scan a range of addresses.
+  - `nmap 192.168.1.0/24` – scan an entire subnetwork using CIDR (Classless Inter-Domain Routing) notation.
 - Many scan types require elevated privileges, so they are often run with `sudo` on Linux/macOS (e.g. `sudo nmap -sS 192.168.1.1`).
 - Nmap also ships with a graphical front-end called `Zenmap`.
 
-**03. How does nmap scan work**
 
+**03. How does nmap scan work**
 
 - Nmap works by sending network packets to a target and interpreting the responses that come back.
 - The general workflow is:
@@ -145,7 +150,6 @@ Nmap can detect a wide range of information about a network and its hosts, inclu
   - `nmap -p- 192.168.1.10` — check all 65,535 ports.
   - `nmap -F 192.168.1.10` — fast scan of the 100 most common ports.
   - `nmap --top-ports 20 192.168.1.10` — check the 20 most commonly used ports.
-- To specify protocol, prefix ports with `T:` for TCP (Transmission Control Protocol) or `U:` for UDP (User Datagram Protocol), e.g. `nmap -p T:80,U:53 192.168.1.10`.
 - Each scanned port is reported with a **state**:
   - **open** — an application is actively accepting connections on that port.
   - **closed** — the port is reachable but no application is listening.
