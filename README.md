@@ -1,7 +1,7 @@
 
 # DLH CyberSecurity Exam
 
-| # | Snake | Nishtman |
+| # | [Holberton Cyber Snake](https://intranet-dlh.hbtn.io/projects/current) | [Nishtman](https://nishtman-k.github.io/cyber-study-hub/) |
 |---|-------|----------|
 | 1 | [Networking Foundations and Architecture](1_nfa.md) | [Networking](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/networking)|
 | 2 | [Cryptography Basics](2_cb.md)                      | [Crypto](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/crypto)|
@@ -12,3 +12,4 @@
 | 7 | [Active Reconnaissance](7_ar.md)                    | [Active](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/active)|
 | 8 | [Nmap Live Host Discovery](8_nmap.md)               | [Nmap](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/nmap/)|
 | 9 | [Python for Cybersecurity](9_python.md)             | [Python](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/python/)|
+| 10 | [Network Traffic Monitoring & Analysis](10_ntma.md) | [Traffic](https://nishtman-k.github.io/cyber-study-hub/cheatsheet/nta/)|

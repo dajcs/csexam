@@ -28,7 +28,7 @@ A `for` loop iterates over a known sequence (like a `list`, `tuple`, or `string`
 > **My Notes**:
 > * `for` and `while` loops can use `break` to exit early and `continue` to skip the current iteration and move to the next one.
 > * `for` and `while` loops can use `else` blocks that execute if the loop completes without hitting a `break` statement.
-> * `for` and `while` loops are basically equivalent in functionality, a `for` loop can be rewritten as a `while` loop and vice versa. (e.g., in 42 school C programming we were not allowed to use `for` loops and we got used to it :-))
+> * `for` and `while` loops are basically equivalent in functionality, a `for` loop can be rewritten as a `while` loop and vice versa. (e.g., in 42 school C programming we were constrained to use only `while` loops and we got used to it :-))
 > * I would use one or the other depending which one is more readable and makes more sense in the context of the problem. For example if I have to wait for user input I would use a `while` loop, but to manipulate every item in a list I would use a `for` loop, etc.
 
 **05. What is a function in Python, and how do you define and call it with parameters and return values?**
